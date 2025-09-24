@@ -1,0 +1,49 @@
+/* 1. Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Centrar la tarjeta en medio de la pantalla */
+body {
+  display: flex;                  /* Activamos Flexbox en el body */
+  justify-content: center;        /* Centrar horizontalmente */
+  align-items: center;            /* Centrar verticalmente */
+  height: 105vh;                  /* 100% de la altura de la pantalla */
+  background-color: #f0f0f0;
+}
+
+/* 3. Estilo de la tarjeta */
+.card {
+  display: flex;                  /* La tarjeta también es flexbox */
+  flex-direction: column;         /* Los hijos (h1, p, button) van en columna */
+  justify-content: center;        /* Centrar contenido vertical dentro */
+  align-items: center;            /* Centrar contenido horizontal */
+  
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 5px 50px rgba(69, 23, 176, 0.2);
+}
+
+/* 4. Estilos internos */
+.card h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
