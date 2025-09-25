@@ -1,35 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Página Flexbox</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Mackbook Pro</h1>
     <nav>
-      <ul>
-        <li>
-            <a href="./index.html">HOME</a>
-        </li>
-        <li>
-            <a href="./contactanos.html">CONTACTANOS</a>
-        </li>
-        <li>
-            <a href="./quienessomos.html">QUIENES SOMOS</a>
-        </li>
-      </ul>  
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#quienes-somos">Quienes somos</a>
     </nav>
-    <main>
-        <h1>Hola mundo</h1>
-        <article>
-            <p>
-                Hola buenas tardes como estan todos
-                me gusta programar.
-            </p>
-        </article>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main">
     
+    <section class="contenido" id="inicio">
+      <div class="inicio1">
+        <h2>Inicio</h2>
+        <p>Bienvenido a nuestra página. Aquí encontrarás las novedades y lo más destacado.</p>
+        <img src="imagen.jpg" alt="Descripción" class="imagen-ancho">
+      </div>
+    </section> <!-- ← CERRAR section -->
+
+    <section class="contenido" id="servicios">
+      <div class="inicio">
+        <h2>Servicios</h2>
+        <p>Ofrecemos reparación, venta y asesoría de equipos Mackbook Pro.</p>
+      </div>    
+    </section> <!-- ← CERRAR section -->
+
+    <section class="contenido" id="contacto">
+      <div class="inicio">
+        <h2>Contacto</h2>
+        <p>Escríbenos a <a href="mailto:info@mackbookpro.com">info@mackbookpro.com</a> o llama al 123-456-789.</p>
+      </div>
+    </section> <!-- ← CERRAR section -->
+
+    <section class="contenido" id="quienes-somos">
+      <div class="inicio">
+        <h2>Quienes somos</h2>
+        <p>Somos un equipo apasionado por la tecnología y la innovación.</p>
+      </div>    
+    </section> <!-- ← CERRAR section -->
     
-    </main>    
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 - Mi Página Web</p>
+  </footer>
 </body>
 </html>
