@@ -2,9 +2,9 @@
 /* 1. RESET Y BASE */
 /* ---------------------------------------------------- */
 :root {
-    --color-primary: #007bff; /* Azul vibrante */
-    --color-secondary: #f8f9fa; /* Gris claro para fondos */
-    --color-dark: #212529; /* Casi negro para texto */
+    --color-primary: #007bff;
+    --color-secondary: #f8f9fa;
+    --color-dark: #212529;
     --font-family: 'Poppins', sans-serif;
     --transition-speed: 0.3s;
 }
@@ -15,55 +15,131 @@
     padding: 0;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
     color: var(--color-dark);
     background-color: #fff;
-    scroll-behavior: smooth; /* Desplazamiento suave para los enlaces */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-anchor: none;
 }
 
 /* ---------------------------------------------------- */
 /* 2. TIPOGRAFÍA Y ENLACES */
 /* ---------------------------------------------------- */
-h1, h2 {
+h1, h2, h3 {
     font-weight: 700;
     margin-bottom: 0.5em;
     color: var(--color-dark);
 }
 
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    outline: none;
+}
+
 a {
     color: var(--color-primary);
-    text-decoration: none;
     transition: color var(--transition-speed);
 }
 
 a:hover {
-    color: #0056b3; /* Tono más oscuro al pasar el mouse */
+    color: #0056b3;
 }
 
-/* Estilo para el rol en el h1 */
+a:visited {
+    color: var(--color-primary);
+}
+
+a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
 .role {
     font-weight: 300;
     font-size: 0.8em;
     opacity: 0.7;
 }
 
+.tagline {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
 /* ---------------------------------------------------- */
-/* 3. CABECERA Y NAVEGACIÓN (Diseño Flexbox) */
+/* 3. SOLUCIÓN PARA ANCLAJES */
+/* ---------------------------------------------------- */
+.anchor-offset::before {
+    content: "";
+    display: block;
+    height: 90px;
+    margin-top: -90px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.hero-section,
+.projects-section,
+.skills-section,
+.contact-section {
+    position: relative;
+}
+
+/* ---------------------------------------------------- */
+/* 4. CABECERA Y NAVEGACIÓN - TRANSPARENTE */
 /* ---------------------------------------------------- */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    position: sticky; /* Fija la cabecera al scroll */
+    background-color: transparent;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    height: 70px;
+    transition: all var(--transition-speed) ease;
+    backdrop-filter: blur(0px);
 }
 
+.site-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    color: var(--color-dark);
+    transition: color var(--transition-speed);
+}
+
+/* Enlaces del header - color oscuro por defecto */
 .site-header ul {
     list-style: none;
     display: flex;
@@ -72,310 +148,459 @@ a:hover {
 
 .site-header a {
     font-weight: 600;
+    color: var(--color-dark);
+    transition: color var(--transition-speed);
+}
+
+.site-header a:hover {
+    color: var(--color-primary);
+}
+
+.site-header a:visited {
+    color: var(--color-dark);
 }
 
 /* ---------------------------------------------------- */
-/* 4. SECCIONES Y LAYOUT (Base Responsiva) */
+/* 5. HERO SECTION CON IMAGEN */
 /* ---------------------------------------------------- */
-
-main section {
-    padding: 4rem 5%;
-    min-height: 50vh;
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 100vh; /* Mayor altura para mejor efecto */
+    padding: 6rem 5%;
+    text-align: left;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-/* Color de fondo alternado para mejor contraste visual */
-.projects-section, .contact-section {
-    background-color: var(--color-secondary);
+.hero-content {
+    flex: 1;
+    max-width: 600px;
 }
 
-/* Botón de llamada a la acción (CTA) */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.profile-image-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-primary);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--color-primary), transparent, var(--color-primary));
+    z-index: -1;
+    opacity: 0.7;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(2deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-image:hover {
+    animation: float 1s ease-in-out infinite, pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 15px 40px rgba(0, 123, 255, 0.5);
+    }
+}
+
+/* ---------------------------------------------------- */
+/* 6. BOTONES Y ENLACES ESPECIALES */
+/* ---------------------------------------------------- */
 .cta-button {
     display: inline-block;
     background-color: var(--color-primary);
-    color: white;
-    padding: 0.75rem 1.5rem;
+    color: white !important;
+    padding: 0.75rem 2rem;
     border-radius: 4px;
     margin-top: 1.5rem;
     font-weight: 600;
+    text-decoration: none !important;
     transition: transform var(--transition-speed), background-color var(--transition-speed);
+    font-size: 1.1rem;
 }
 
-/* **EFECTO VISUAL CLAVE 1: Transformación en el CTA** */
 .cta-button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px); /* Pequeño levantamiento para dar sensación de clic */
+    color: white !important;
+    transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
-
-/* ---------------------------------------------------- */
-/* 5. DISEÑO DE PROYECTOS (CSS Grid) */
-/* ---------------------------------------------------- */
-.projects-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.cta-button:visited {
+    color: white !important;
 }
 
+.view-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: transform var(--transition-speed);
+}
+
+.view-link:hover {
+    transform: translateX(5px);
+}
+
+/* ---------------------------------------------------- */
+/* 7. PROYECTOS */
+/* ---------------------------------------------------- */
 .projects-section {
-    /* **UTILIZAR GRID para un diseño flexible de portafolio** */
+    padding: 6rem 5%;
+    background-color: var(--color-secondary);
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles */
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
 }
 
 .project-card {
     background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* **EFECTO VISUAL CLAVE 2: Efecto 3D en la tarjeta** */
 .project-card:hover {
-    transform: translateY(-5px) scale(1.02); /* Escala y levanta ligeramente */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tags {
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
 .tags span {
     display: inline-block;
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    padding: 0.3rem 0.6rem;
+    padding: 0.3rem 0.8rem;
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     border-radius: 20px;
     font-size: 0.85rem;
-    margin-top: 1rem;
+    font-weight: 600;
 }
 
 /* ---------------------------------------------------- */
-/* 6. HABILIDADES Y PIE DE PÁGINA */
+/* 8. HABILIDADES */
 /* ---------------------------------------------------- */
+.skills-section {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: 3rem;
+}
+
 .skills-list {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Para que las habilidades se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .skills-list li {
     background-color: var(--color-primary);
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
     font-weight: 600;
+    transition: transform var(--transition-speed);
 }
 
+.skills-list li:hover {
+    transform: translateY(-3px);
+}
+
+/* ---------------------------------------------------- */
+/* 9. CONTACTO */
+/* ---------------------------------------------------- */
+.contact-section {
+    padding: 6rem 5%;
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-cta {
+    text-align: center;
+}
+
+.contact-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+address {
+    font-style: normal;
+}
+
+address p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* ---------------------------------------------------- */
+/* 10. FOOTER */
+/* ---------------------------------------------------- */
 .site-footer {
     text-align: center;
-    padding: 1.5rem 5%;
+    padding: 2rem 5%;
     background-color: var(--color-dark);
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
+.site-footer a:visited {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* ---------------------------------------------------- */
-/* 7. ADAPTACIÓN MÓVIL (Responsividad) */
+/* 11. AJUSTES PRINCIPALES */
+/* ---------------------------------------------------- */
+main {
+    margin-top: 70px;
+    flex: 1;
+}
+
+main section {
+    scroll-margin-top: 90px;
+}
+
+/* ---------------------------------------------------- */
+/* 12. RESPONSIVO */
 /* ---------------------------------------------------- */
 @media (max-width: 768px) {
     .site-header {
         flex-direction: column;
         padding: 1rem 5%;
-    }
-
-    .site-header ul {
-        margin-top: 1rem;
+        height: auto;
+        min-height: auto;
         gap: 1rem;
     }
 
-    .hero-section h2 {
-        font-size: 2rem;
-    }
-    /* ---------------------------------------------------- */
-/* 7. ADAPTACIÓN MÓVIL (Responsividad Mejorada) */
-/* ---------------------------------------------------- */
-@media (max-width: 768px) {
-    /* Cabecera y Navegación */
-    .site-header {
-        flex-direction: column;
-        padding: 1rem 5%;
-        position: relative; /* Cambiamos de sticky a relative en móvil para mejor UX */
-    }
-
     .site-header ul {
-        margin-top: 1rem;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .site-header li {
-        margin: 0.25rem 0;
-    }
-
-    /* Hero Section y Tipografía */
-    .hero-section h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .hero-section h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .role {
-        font-size: 0.7em;
-        display: block;
-        margin-top: 0.5rem;
-    }
-
-    /* Secciones principales */
-    main section {
-        padding: 2.5rem 5%;
-        min-height: auto; /* Eliminamos altura mínima fija */
-    }
-
-    /* Grid de proyectos - 1 columna en móvil */
-    .projects-section {
-        grid-template-columns: 1fr;
+        margin-top: 0;
         gap: 1.5rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        width: 100%;
     }
 
-    .project-card {
-        padding: 1.25rem;
-        margin: 0 auto;
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        padding: 4rem 5%;
+        min-height: 70vh;
+    }
+
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .profile-image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-content {
         max-width: 100%;
     }
 
-    /* Lista de habilidades */
-    .skills-list {
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .skills-list li {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    /* Botones CTA */
-    .cta-button {
-        display: block;
-        text-align: center;
-        margin: 1.5rem auto 0;
-        width: fit-content;
-        padding: 0.9rem 1.8rem;
-    }
-
-    /* Ajustes de texto generales */
-    h1, h2 {
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-        font-size: 0.95rem;
-    }
-}
-
-/* Para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-    .site-header {
-        padding: 0.8rem 5%;
-    }
-
-    .site-header ul {
-        gap: 0.8rem;
-        font-size: 0.9rem;
-    }
-
     main section {
-        padding: 2rem 5%;
+        scroll-margin-top: 120px;
     }
-
-    .hero-section h1 {
-        font-size: 1.75rem;
+    
+    .anchor-offset::before {
+        height: 120px;
+        margin-top: -120px;
     }
-
-    .hero-section h2 {
-        font-size: 1.25rem;
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-
-    .projects-section {
+    
+    .skills-list {
         gap: 1rem;
     }
-
-    .project-card {
-        padding: 1rem;
-    }
-
-    .skills-list {
-        gap: 0.8rem;
-    }
-
+    
     .skills-list li {
-        padding: 0.35rem 0.7rem;
-        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
     }
 
-    .cta-button {
-        padding: 0.8rem 1.6rem;
-        font-size: 0.9rem;
-        width: 100%;
-        max-width: 280px;
-    }
-
-    /* Tags de proyectos más compactos */
-    .tags span {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.8rem;
-        margin-right: 0.3rem;
-        margin-top: 0.8rem;
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
     }
 }
 
-/* Para tablets (768px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .projects-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
-        gap: 1.8rem;
+@media (max-width: 480px) {
+    .site-header ul {
+        gap: 1rem;
+        justify-content: space-between;
     }
-
+    
+    .site-header a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
     main section {
         padding: 3rem 5%;
     }
-
-    .site-header {
-        padding: 1rem 5%;
-    }
-}
-
-/* Mejoras de accesibilidad en móvil */
-@media (max-width: 768px) {
-    /* Aumentar área de click en enlaces y botones */
-    .site-header a {
-        padding: 0.5rem 0.8rem;
-        display: inline-block;
-    }
-
+    
     .cta-button {
-        min-height: 44px; /* Tamaño mínimo recomendado para touch */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
-    /* Mejorar espaciado para lectura */
-    p, li {
-        line-height: 1.7;
+    .profile-image-container {
+        width: 200px;
+        height: 200px;
     }
 }
 
-/* Prevenir zoom en inputs en iOS */
-@media (max-width: 768px) {
-    input, select, textarea {
-        font-size: 16px; /* Previene zoom en iOS */
+@media (max-width: 380px) {
+    .site-header ul {
+        gap: 0.8rem;
+        justify-content: flex-start;
+    }
+    
+    .site-header a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
     }
 }
+
+/* ---------------------------------------------------- */
+/* 13. MEJORAS PARA ACCESIBILIDAD */
+/* ---------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
 }
