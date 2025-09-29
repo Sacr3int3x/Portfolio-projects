@@ -1,0 +1,78 @@
+/* --- Estilos para las Tarjetas tipo Mac (Colores Integrados) --- */
+
+.tarjetas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.tarjeta-mac-style {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-mac-style:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al flotar */
+}
+
+/* El texto dentro de las tarjetas ahora tiene contraste y se integra */
+.tarjeta-mac-style h3 {
+    margin: 0.5rem 0 0.8rem;
+    padding: 0 1.5rem;
+    font-size: 1.3rem;
+    color: var(--color-text-light); /* Título en blanco */
+}
+
+.tarjeta-mac-style p {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8); /* Párrafo en blanco con transparencia */
+}
+
+.tarjeta-mac-style .paso {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500; /* Un poco más de peso */
+    color: rgba(255, 255, 255, 0.7); /* Texto guía con más transparencia */
+}
+
+/* Colores de Fondo (Usando las variables de acento) */
+
+.mac-blue {
+    background-color: var(--accent-blue); /* #007aff */
+}
+
+.mac-yellow {
+    background-color: var(--accent-gold); /* #ff9500 */
+}
+
+.mac-green {
+    background-color: var(--accent-green); /* #30b15a */
+}
+
+/* El fondo inferior se hace más sutil */
+.tarjeta-imagen {
+    background-color: rgba(0, 0, 0, 0.1); /* Sutil negro transparente */
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Media Query (Mantener la responsividad) */
+@media (max-width: 600px) {
+    .tarjetas-grid {
+        grid-template-columns: 1fr;
+    }
+}

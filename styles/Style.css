@@ -1,90 +1,194 @@
-/* Reseteo */
+/* ---------------------------------------------------- */
+/* 1. RESET Y BASE */
+/* ---------------------------------------------------- */
+:root {
+    --color-primary: #007bff; /* Azul vibrante */
+    --color-secondary: #f8f9fa; /* Gris claro para fondos */
+    --color-dark: #212529; /* Casi negro para texto */
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* ← Asegurar altura completa */
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: #fff;
+    scroll-behavior: smooth; /* Desplazamiento suave para los enlaces */
 }
 
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
+/* ---------------------------------------------------- */
+/* 2. TIPOGRAFÍA Y ENLACES */
+/* ---------------------------------------------------- */
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: var(--color-dark);
 }
 
-.header nav {
-  display: flex;
-  align-items: center;
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-speed);
 }
 
-.header nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+a:hover {
+    color: #0056b3; /* Tono más oscuro al pasar el mouse */
 }
 
-/* Contenido principal */
-.main {
-  flex: 1; /* Ocupa el espacio disponible */
-  display: flex; /* ← Coherente con flex:1 */
-  flex-direction: column;
+/* Estilo para el rol en el h1 */
+.role {
+    font-weight: 300;
+    font-size: 0.8em;
+    opacity: 0.7;
 }
 
-.contenido {
-  flex: 1;
-  width: 100%; /* ← Mejor que 100vw */
-  background: #f4f4f4;
-  padding: 2rem; /* ← Usar unidades relativas */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* ---------------------------------------------------- */
+/* 3. CABECERA Y NAVEGACIÓN (Diseño Flexbox) */
+/* ---------------------------------------------------- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Fija la cabecera al scroll */
+    top: 0;
+    z-index: 1000;
 }
 
-/* Footer */
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  /* margin-top: auto; ← Alternativa si no usas flex:1 */
+.site-header ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.inicio {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.site-header a {
+    font-weight: 600;
 }
-.inicio1 {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+/* ---------------------------------------------------- */
+/* 4. SECCIONES Y LAYOUT (Base Responsiva) */
+/* ---------------------------------------------------- */
+
+main section {
+    padding: 4rem 5%;
+    min-height: 50vh;
 }
-.imagen-ancho {
-  width: 100vw; /* Ancho completo del viewport */
-  max-width: 100vw; /* Evitar overflow */
-  height: auto; /* Mantener proporciones */
-  display: block;
-  margin: 20px 0;
-  opacity: (0.5); /* 0 es totalmente transparente, 1 es opaco */
+
+/* Color de fondo alternado para mejor contraste visual */
+.projects-section, .contact-section {
+    background-color: var(--color-secondary);
+}
+
+/* Botón de llamada a la acción (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+/* **EFECTO VISUAL CLAVE 1: Transformación en el CTA** */
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Pequeño levantamiento para dar sensación de clic */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+
+/* ---------------------------------------------------- */
+/* 5. DISEÑO DE PROYECTOS (CSS Grid) */
+/* ---------------------------------------------------- */
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-section {
+    /* **UTILIZAR GRID para un diseño flexible de portafolio** */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles */
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* **EFECTO VISUAL CLAVE 2: Efecto 3D en la tarjeta** */
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Escala y levanta ligeramente */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+}
+
+.tags span {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+/* ---------------------------------------------------- */
+/* 6. HABILIDADES Y PIE DE PÁGINA */
+/* ---------------------------------------------------- */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Para que las habilidades se envuelvan en pantallas pequeñas */
+    gap: 1.5rem;
+}
+
+.skills-list li {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem 5%;
+    background-color: var(--color-dark);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------- */
+/* 7. ADAPTACIÓN MÓVIL (Responsividad) */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    .site-header ul {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
 }

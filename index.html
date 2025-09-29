@@ -1,61 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>mackbook pro</title>
-  <link rel="stylesheet" href="./styles/Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anibal Ubieda | Portafolio Web </title>
+    <link rel="stylesheet" href="/styles/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <h1>Mackbook Pro</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#quienes-somos">Quienes somos</a>
-    </nav>
-  </header>
+    <header class="site-header">
+        <h1 class="logo">Anibal Ubieda <span class="role">| Desarrollador Full Stack</span></h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#about">Acerca de Mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Contenido principal -->
-  <main class="main">
-    
-    <section class="contenido" id="inicio">
-      <div class="inicio1">
-        <h2>Inicio</h2>
-        <p>Bienvenido a nuestra página. Aquí encontrarás las novedades y lo más destacado.</p>
-        <img src="./images/imagen.JPG" alt="Descripción" class="imagen-ancho">
-      </div>
+    <main>
+        
+        <section id="about" class="hero-section">
+            <h2>Hola, soy el Ing. Anibal</h2>
+            <p class="tagline">Construyo experiencias digitales que combinan alto nivel de diseño con un rendimiento Óptimo.</p>
+            <a href="#projects" class="cta-button">Ver Proyectos Destacados</a>
+        </section>
 
-    </section> <!-- ← CERRAR section -->
+        <section id="projects" class="projects-section">
+            <h2>Proyectos Destacados</h2>
+            
+            <article class="project-card">
+                <h3>Proyecto N°1: E-commerce Moderno</h3>
+                <p>Una plataforma de venta en línea construida con React y Next.js. Enfocada en la velocidad y el UX.</p>
+                <div class="tags">
+                    <span>#React</span>
+                    <span>#NextJS</span>
+                    <span>#CSSGrid</span>
+                </div>
+                <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+            </article>
 
-    <section class="contenido" id="servicios">
-      <div class="inicio">
-        <h2>Servicios</h2>
-        <p>Ofrecemos reparación, venta y asesoría de equipos Mackbook Pro.</p>
-      </div>    
-    </section> <!-- ← CERRAR section -->
+            <article class="project-card">
+                <h3>Proyecto N°2: Dashboard Interactivo</h3>
+                <p>Visualización de datos avanzada usando D3.js y animaciones GSAP.</p>
+                <div class="tags">
+                    <span>#VueJS</span>
+                    <span>#D3JS</span>
+                    <span>#GSAP</span>
+                </div>
+                <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+            </article>
+            
+        </section>
 
-    <section class="contenido" id="contacto">
-      <div class="inicio">
-        <h2>Contacto</h2>
-        <p>Escríbenos a <a href="mailto:info@mackbookpro.com">info@mackbookpro.com</a> o llama al 123-456-789.</p>
-      </div>
-    </section> <!-- ← CERRAR section -->
+        <section id="skills" class="skills-section">
+            <h2>Mi Stack Tecnológico</h2>
+            <ul class="skills-list">
+                <li>HTML5 Semántico</li>
+                <li>CSS3 (Flexbox & Grid)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React / Vue</li>
+                <li>Performance & SEO</li>
+            </ul>
+        </section>
 
-    <section class="contenido" id="quienes-somos">
-      <div class="inicio">
-        <h2>Quienes somos</h2>
-        <p>Somos un equipo apasionado por la tecnología y la innovación.</p>
-      </div>    
-    </section> <!-- ← CERRAR section -->
-    
-  </main>
+        <section id="contact" class="contact-section">
+            <h2>Hablemos de tu proyecto</h2>
+            <address>
+                <p>Email: <a href="mailto:tunombre@email.com">aubiedag@gmail.com</a></p>
+                <p>LinkedIn: <a href="#" target="_blank">/tuperfil</a></p>
+            </address>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 - Mi Página Web</p>
-  </footer>
+    <footer class="site-footer">
+        <p>&copy; <time datetime="2025">2025</time> Mi Nombre. Construido con <span aria-label="corazón">❤️</span> y código limpio.</p>
+    </footer>
+
 </body>
 </html>
