@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anibal Ubieda | Portafolio Web </title>
-    <link rel="stylesheet" href="/styles/Style.css">
+    <title>Anibal Ubieda | Portafolio Web</title>
+    <link rel="stylesheet" href="styles/Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<script>
+    // Efecto de transparencia en el header al hacer scroll
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.site-header');
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
 <body>
 
     <header class="site-header">
@@ -23,61 +36,92 @@
 
     <main>
         
-        <section id="about" class="hero-section">
-            <h2>Hola, soy el Ing. Anibal</h2>
-            <p class="tagline">Construyo experiencias digitales que combinan alto nivel de diseño con un rendimiento Óptimo.</p>
-            <a href="#projects" class="cta-button">Ver Proyectos Destacados</a>
+        <section id="about" class="hero-section anchor-offset">
+            <div class="hero-content">
+                <h2>Hola, soy el Ing. Anibal</h2>
+                <p class="tagline">Construyo experiencias digitales que combinan alto nivel de diseño con un rendimiento óptimo.</p>
+                <a href="#projects" class="cta-button">Ver Proyectos Destacados</a>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image-container">
+                    <img src="images/tu-foto-de-perfil.jpg" alt="Anibal Ubieda - Desarrollador Full Stack" class="profile-image">
+                </div>
+            </div>
         </section>
 
-        <section id="projects" class="projects-section">
+        <section id="projects" class="projects-section anchor-offset">
             <h2>Proyectos Destacados</h2>
-            
-            <article class="project-card">
-                <h3>Proyecto N°1: E-commerce Moderno</h3>
-                <p>Una plataforma de venta en línea construida con React y Next.js. Enfocada en la velocidad y el UX.</p>
-                <div class="tags">
-                    <span>#React</span>
-                    <span>#NextJS</span>
-                    <span>#CSSGrid</span>
-                </div>
-                <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
-            </article>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Proyecto N°1: E-commerce Moderno</h3>
+                    <p>Una plataforma de venta en línea construida con React y Next.js. Enfocada en la velocidad y el UX.</p>
+                    <div class="tags">
+                        <span>#React</span>
+                        <span>#NextJS</span>
+                        <span>#CSSGrid</span>
+                    </div>
+                    <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+                </article>
 
-            <article class="project-card">
-                <h3>Proyecto N°2: Dashboard Interactivo</h3>
-                <p>Visualización de datos avanzada usando D3.js y animaciones GSAP.</p>
-                <div class="tags">
-                    <span>#VueJS</span>
-                    <span>#D3JS</span>
-                    <span>#GSAP</span>
-                </div>
-                <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
-            </article>
-            
+                <article class="project-card">
+                    <h3>Proyecto N°2: Dashboard Interactivo</h3>
+                    <p>Visualización de datos avanzada usando D3.js y animaciones GSAP.</p>
+                    <div class="tags">
+                        <span>#VueJS</span>
+                        <span>#D3JS</span>
+                        <span>#GSAP</span>
+                    </div>
+                    <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Proyecto N°3: API REST Segura</h3>
+                    <p>Desarrollo de API REST con Node.js y Express, implementando autenticación JWT y seguridad avanzada.</p>
+                    <div class="tags">
+                        <span>#NodeJS</span>
+                        <span>#Express</span>
+                        <span>#MongoDB</span>
+                        <span>#JWT</span>
+                    </div>
+                    <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+                </article>
+            </div>
         </section>
 
-        <section id="skills" class="skills-section">
+        <section id="skills" class="skills-section anchor-offset">
             <h2>Mi Stack Tecnológico</h2>
             <ul class="skills-list">
                 <li>HTML5 Semántico</li>
                 <li>CSS3 (Flexbox & Grid)</li>
                 <li>JavaScript (ES6+)</li>
                 <li>React / Vue</li>
+                <li>Node.js & Express</li>
+                <li>MongoDB & MySQL</li>
+                <li>Git & GitHub</li>
                 <li>Performance & SEO</li>
+                <li>Responsive Design</li>
+                <li>REST APIs</li>
             </ul>
         </section>
 
-        <section id="contact" class="contact-section">
+        <section id="contact" class="contact-section anchor-offset">
             <h2>Hablemos de tu proyecto</h2>
-            <address>
-                <p>Email: <a href="mailto:tunombre@email.com">aubiedag@gmail.com</a></p>
-                <p>LinkedIn: <a href="#" target="_blank">/tuperfil</a></p>
-            </address>
+            <div class="contact-content">
+                <address>
+                    <p>Email: <a href="mailto:aubiedag@gmail.com">aubiedag@gmail.com</a></p>
+                    <p>LinkedIn: <a href="#" target="_blank">/anibal-ubieda</a></p>
+                    <p>GitHub: <a href="#" target="_blank">/anibalubieda</a></p>
+                </address>
+                <div class="contact-cta">
+                    <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                    <a href="mailto:aubiedag@gmail.com" class="cta-button">Enviar Email</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; <time datetime="2025">2025</time> Mi Nombre. Construido con <span aria-label="corazón">❤️</span> y código limpio.</p>
+        <p>&copy; <time datetime="2025">2025</time> Anibal Ubieda. Construido con <span aria-label="corazón">❤️</span> y código limpio.</p>
     </footer>
 
 </body>
