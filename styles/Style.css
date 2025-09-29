@@ -191,4 +191,191 @@ main section {
     .hero-section h2 {
         font-size: 2rem;
     }
+    /* ---------------------------------------------------- */
+/* 7. ADAPTACIÓN MÓVIL (Responsividad Mejorada) */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Cabecera y Navegación */
+    .site-header {
+        flex-direction: column;
+        padding: 1rem 5%;
+        position: relative; /* Cambiamos de sticky a relative en móvil para mejor UX */
+    }
+
+    .site-header ul {
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .site-header li {
+        margin: 0.25rem 0;
+    }
+
+    /* Hero Section y Tipografía */
+    .hero-section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .role {
+        font-size: 0.7em;
+        display: block;
+        margin-top: 0.5rem;
+    }
+
+    /* Secciones principales */
+    main section {
+        padding: 2.5rem 5%;
+        min-height: auto; /* Eliminamos altura mínima fija */
+    }
+
+    /* Grid de proyectos - 1 columna en móvil */
+    .projects-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /* Lista de habilidades */
+    .skills-list {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .skills-list li {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Botones CTA */
+    .cta-button {
+        display: block;
+        text-align: center;
+        margin: 1.5rem auto 0;
+        width: fit-content;
+        padding: 0.9rem 1.8rem;
+    }
+
+    /* Ajustes de texto generales */
+    h1, h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .site-header {
+        padding: 0.8rem 5%;
+    }
+
+    .site-header ul {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    main section {
+        padding: 2rem 5%;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .projects-section {
+        gap: 1rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .skills-list {
+        gap: 0.8rem;
+    }
+
+    .skills-list li {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Tags de proyectos más compactos */
+    .tags span {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        margin-right: 0.3rem;
+        margin-top: 0.8rem;
+    }
+}
+
+/* Para tablets (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+        gap: 1.8rem;
+    }
+
+    main section {
+        padding: 3rem 5%;
+    }
+
+    .site-header {
+        padding: 1rem 5%;
+    }
+}
+
+/* Mejoras de accesibilidad en móvil */
+@media (max-width: 768px) {
+    /* Aumentar área de click en enlaces y botones */
+    .site-header a {
+        padding: 0.5rem 0.8rem;
+        display: inline-block;
+    }
+
+    .cta-button {
+        min-height: 44px; /* Tamaño mínimo recomendado para touch */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mejorar espaciado para lectura */
+    p, li {
+        line-height: 1.7;
+    }
+}
+
+/* Prevenir zoom en inputs en iOS */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px; /* Previene zoom en iOS */
+    }
+}
 }
