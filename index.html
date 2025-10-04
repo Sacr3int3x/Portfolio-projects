@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anibal Ubieda | Portafolio Web</title>
-    <link rel="stylesheet" href="styles/Style.css">
+    <meta name="description" content="Portafolio de Anibal Ubieda — Desarrollador Full Stack. Proyectos, habilidades y contacto.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<script>
-    // Efecto de transparencia en el header al hacer scroll
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.site-header');
-        const scrollPosition = window.scrollY;
-        
-        if (scrollPosition > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-</script>
 <body>
 
-    <header class="site-header">
+    <!-- Skip link para accesibilidad -->
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+    <header class="site-header" role="banner">
         <h1 class="logo">Anibal Ubieda <span class="role">| Desarrollador Full Stack</span></h1>
-        <nav aria-label="Navegación principal">
+
+        <nav role="navigation" aria-label="Navegación principal">
             <ul>
                 <li><a href="#about">Acerca de Mí</a></li>
                 <li><a href="#projects">Proyectos</a></li>
@@ -34,63 +27,68 @@
         </nav>
     </header>
 
-    <main>
-        
-        <section id="about" class="hero-section anchor-offset">
+    <main id="main-content" tabindex="-1">
+        <!-- ABOUT / HERO -->
+        <section id="about" class="hero-section anchor-offset" tabindex="-1" aria-labelledby="about-heading">
             <div class="hero-content">
-                <h2>Hola, soy el Ing. Anibal</h2>
+                <h2 id="about-heading">Hola, soy el Ing. Anibal</h2>
                 <p class="tagline">Construyo experiencias digitales que combinan alto nivel de diseño con un rendimiento óptimo.</p>
                 <a href="#projects" class="cta-button">Ver Proyectos Destacados</a>
             </div>
-            <div class="hero-image">
-                <div class="profile-image-container">
+
+            <div class="hero-image" aria-hidden="false">
+                <div class="profile-image-container" role="img" aria-label="Foto de perfil de Anibal Ubieda">
+                    <!-- Sustituye la ruta por tu imagen real -->
                     <img src="images/tu-foto-de-perfil.jpg" alt="Anibal Ubieda - Desarrollador Full Stack" class="profile-image">
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects-section anchor-offset">
-            <h2>Proyectos Destacados</h2>
+        <!-- PROJECTS -->
+        <section id="projects" class="projects-section anchor-offset" tabindex="-1" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Proyectos Destacados</h2>
+
             <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Proyecto N°1: E-commerce Moderno</h3>
-                    <p>Una plataforma de venta en línea construida con React y Next.js. Enfocada en la velocidad y el UX.</p>
+                <article class="project-card" aria-labelledby="p1-title">
+                    <h3 id="p1-title">Proyecto N°1: E-commerce Moderno</h3>
+                    <p>Plataforma de venta en línea construida con React y Next.js. Enfocada en velocidad, accesibilidad y UX.</p>
                     <div class="tags">
                         <span>#React</span>
                         <span>#NextJS</span>
                         <span>#CSSGrid</span>
                     </div>
-                    <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Ver Demo →</a>
                 </article>
 
-                <article class="project-card">
-                    <h3>Proyecto N°2: Dashboard Interactivo</h3>
-                    <p>Visualización de datos avanzada usando D3.js y animaciones GSAP.</p>
+                <article class="project-card" aria-labelledby="p2-title">
+                    <h3 id="p2-title">Proyecto N°2: Dashboard Interactivo</h3>
+                    <p>Visualización de datos avanzada usando D3.js y animaciones GSAP para transiciones suaves.</p>
                     <div class="tags">
                         <span>#VueJS</span>
                         <span>#D3JS</span>
                         <span>#GSAP</span>
                     </div>
-                    <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Ver Demo →</a>
                 </article>
 
-                <article class="project-card">
-                    <h3>Proyecto N°3: API REST Segura</h3>
-                    <p>Desarrollo de API REST con Node.js y Express, implementando autenticación JWT y seguridad avanzada.</p>
+                <article class="project-card" aria-labelledby="p3-title">
+                    <h3 id="p3-title">Proyecto N°3: API REST Segura</h3>
+                    <p>API REST con Node.js y Express, autenticación JWT y buenas prácticas de seguridad y tests.</p>
                     <div class="tags">
                         <span>#NodeJS</span>
                         <span>#Express</span>
                         <span>#MongoDB</span>
                         <span>#JWT</span>
                     </div>
-                    <a href="#" target="_blank" class="view-link">Ver Demo &rarr;</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Ver Demo →</a>
                 </article>
             </div>
         </section>
 
-        <section id="skills" class="skills-section anchor-offset">
-            <h2>Mi Stack Tecnológico</h2>
-            <ul class="skills-list">
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section anchor-offset" tabindex="-1" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Mi Stack Tecnológico</h2>
+            <ul class="skills-list" aria-hidden="false">
                 <li>HTML5 Semántico</li>
                 <li>CSS3 (Flexbox & Grid)</li>
                 <li>JavaScript (ES6+)</li>
@@ -104,14 +102,16 @@
             </ul>
         </section>
 
-        <section id="contact" class="contact-section anchor-offset">
-            <h2>Hablemos de tu proyecto</h2>
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section anchor-offset" tabindex="-1" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Hablemos de tu proyecto</h2>
             <div class="contact-content">
                 <address>
                     <p>Email: <a href="mailto:aubiedag@gmail.com">aubiedag@gmail.com</a></p>
-                    <p>LinkedIn: <a href="#" target="_blank">/anibal-ubieda</a></p>
-                    <p>GitHub: <a href="#" target="_blank">/anibalubieda</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/anibal-ubieda" target="_blank" rel="noopener noreferrer">/anibal-ubieda</a></p>
+                    <p>GitHub: <a href="https://github.com/anibalubieda" target="_blank" rel="noopener noreferrer">/anibalubieda</a></p>
                 </address>
+
                 <div class="contact-cta">
                     <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
                     <a href="mailto:aubiedag@gmail.com" class="cta-button">Enviar Email</a>
@@ -120,9 +120,40 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; <time datetime="2025">2025</time> Anibal Ubieda. Construido con <span aria-label="corazón">❤️</span> y código limpio.</p>
+    <footer class="site-footer" role="contentinfo">
+        <p>&copy; <time datetime="2025">2025</time> Anibal Ubieda. Construido con <span aria-hidden="true">❤️</span> y código limpio.</p>
     </footer>
 
+    <script>
+        // Header translucent on scroll (defer-like behaviour sin bloquear render)
+        (function () {
+            const header = document.querySelector('.site-header');
+            let lastKnownScroll = 0;
+            let ticking = false;
+
+            function onScroll() {
+                lastKnownScroll = window.scrollY || window.pageYOffset;
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        if (lastKnownScroll > 10) header.classList.add('scrolled');
+                        else header.classList.remove('scrolled');
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            // Ensure skip link focuses main for keyboard users
+            const skip = document.querySelector('.skip-link');
+            if (skip) {
+                skip.addEventListener('click', function () {
+                    const main = document.getElementById('main-content');
+                    if (main) main.focus();
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

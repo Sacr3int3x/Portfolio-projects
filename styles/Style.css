@@ -114,7 +114,7 @@ a:focus {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: transparent;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
     left: 0;
@@ -538,69 +538,53 @@ main section {
         text-align: center;
     }
 }
-
+/* ---------------------------------------------------- */
+/* 🔧 AJUSTE EXTRA PARA NAVBAR EN MÓVILES PEQUEÑOS */
+/* ---------------------------------------------------- */
 @media (max-width: 480px) {
-    .site-header ul {
-        gap: 1rem;
-        justify-content: space-between;
-    }
-    
-    .site-header a {
-        font-size: 0.9rem;
-        white-space: nowrap;
-    }
-    
-    main section {
-        padding: 3rem 5%;
-    }
-    
-    .cta-button {
-        width: 100%;
-        text-align: center;
-        padding: 1rem 2rem;
-    }
-    
-    .hero-section h2 {
-        font-size: 1.8rem;
-    }
-    
-    .project-card {
-        padding: 1.5rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem 4%;
+        height: auto;
     }
 
-    .profile-image-container {
-        width: 200px;
-        height: 200px;
+    .site-header ul {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los enlaces bajen de línea */
+        justify-content: center;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .site-header li {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .site-header a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.3rem;
+        display: block;
+        width: 100%;
     }
 }
 
+/* Más refinado aún para pantallas realmente pequeñas */
 @media (max-width: 380px) {
     .site-header ul {
-        gap: 0.8rem;
-        justify-content: flex-start;
+        flex-direction:row;
+        align-items: center;
+        gap: 0rem;
     }
-    
-    .site-header a {
-        font-size: 0.85rem;
-        padding: 0.3rem 0.6rem;
-    }
-}
 
-/* ---------------------------------------------------- */
-/* 13. MEJORAS PARA ACCESIBILIDAD */
-/* ---------------------------------------------------- */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    .site-header a {
+        font-size: 0.7rem;
+        padding: 0.4rem 0,1rem;
     }
-    
-    html {
-        scroll-behavior: auto;
+
+    .logo {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
     }
 }
