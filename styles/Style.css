@@ -148,7 +148,7 @@ a:focus {
 
 .site-header a {
     font-weight: 600;
-    color: var(--color-dark);
+    color: var(--color-secondary);
     transition: color var(--transition-speed);
 }
 
@@ -175,6 +175,7 @@ a:focus {
 }
 
 .hero-content {
+    animation: fadeInUp 1s ease-in-out;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -225,6 +226,11 @@ a:focus {
     z-index: -1;
     opacity: 0.7;
     animation: rotate 10s linear infinite;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
