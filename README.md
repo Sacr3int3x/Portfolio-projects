@@ -1,4 +1,4 @@
-# 🌐 Portafolio | Portfolio — Aníbal Ubieda
+# 🌐 Portafolio | Portfolio — Anibal Ubieda
 
 Bienvenido/a a mi portafolio personal desarrollado con **HTML5, CSS3 y JavaScript puro**, enfocado en mostrar mis proyectos, habilidades y experiencia como **Desarrollador Full Stack**.
 
