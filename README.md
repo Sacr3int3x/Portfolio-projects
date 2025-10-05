@@ -44,18 +44,24 @@ It includes *About Me*, *Projects*, *Skills*, and *Contact* sections, offering s
 |            Frameworks |      — *(Vanilla stack)* |
 | Librerías / Libraries |   Google Fonts (Poppins) |
 |  Herramientas / Tools |      VSCode, Git, GitHub |
-|-----------------------|--------------------------|
+
 
 ---
 
 ## 🧱 Estructura del proyecto | Project Structure
 
 portfolio/
+
 ├── index.html
+
 ├── styles/
-│ └── Style.css
+
+│    └── Style.css
+
 ├── images/
-│ └── tu-foto-de-perfil.jpg
+
+│   └── tu-foto-de-perfil.jpg
+
 └── README.md
 
 ---
@@ -65,7 +71,7 @@ portfolio/
 ### 🧾 Español
 
 1. Clona este repositorio:
-   ```bash
+   
    git clone https://github.com/TU-USUARIO/portfolio.git
 
 Abre la carpeta del proyecto:
