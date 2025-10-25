@@ -1,248 +1,635 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Anibal Ubieda">
-    <meta property="og:title" content="Portfolio | Anibal Ubieda">
-    <meta property="og:description" content="Full Stack Developer — React, Node.js, MongoDB">
-    <meta property="og:image" content="images/tu-foto-de-perfil.jpg">
-    <meta property="og:type" content="website">
-    <title>Portfolio projects | Anibal Ubieda</title>
-    <meta name="description" content="Portafolio de Anibal Ubieda — Desarrollador Full Stack. Proyectos, habilidades y contacto.">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/Style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anibal Ubieda" />
+    <meta property="og:title" content="Portafolio | Anibal Ubieda" />
+    <meta
+      property="og:description"
+      content="Ingeniero en Telecomunicaciones que inicia su camino como desarrollador frontend junior."
+    />
+    <meta property="og:image" content="images/tu-foto-de-perfil.jpg" />
+    <meta property="og:type" content="website" />
+    <title>Portafolio | Anibal Ubieda</title>
+    <meta
+      name="description"
+      content="Portafolio de Anibal Ubieda — Ingeniero en Telecomunicaciones y desarrollador frontend junior. Proyectos, aprendizaje y contacto."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header class="site-header" role="banner">
-        <h1 class="logo">Anibal Ubieda <span class="role">| Full stack developer</span></h1>
+      <h1 class="logo">
+        Anibal Ubieda <span class="role">· Full Stack Developer</span>
+      </h1>
 
-        <nav role="navigation" aria-label="Navegación principal">
-            <ul>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <nav role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#skills">Stack</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="main-content" tabindex="-1">
-
-        <!-- SOBRE MI -->
-        <section id="about" class="hero-section anchor-offset" tabindex="-1" aria-labelledby="about-heading">
-            <div class="hero-content">
-                <h2 id="about-heading">Hi welcome, I'm Eng. Anibal</h2>
-                <p class="tagline">Full-Stack Visionary. I engineer modern, 
-                    high-performance applications from the ground up, leveraging 
-                    React, Node.js, and NoSQL for exceptional user experiences.
-                </p>            
-                <a href="#projects" class="neu-button" >See my projects</a>
+      <section
+        id="about"
+        class="hero-section anchor-offset"
+        tabindex="-1"
+        aria-labelledby="about-heading"
+      >
+        <div class="hero-layout">
+          <aside class="hero-aside" aria-label="Más sobre Anibal">
+            <div class="profile-stack">
+              <div
+                class="profile-image-container"
+                role="img"
+                aria-label="Foto de perfil de Anibal Ubieda"
+              >
+                <img
+                  src="images/tu-foto-de-perfil.jpg"
+                  alt="Anibal Ubieda - Ingeniero en Telecomunicaciones"
+                  class="profile-image"
+                  loading="lazy"
+                />
+              </div>
+              <p class="profile-caption">
+                Ingeniero en Telecomunicaciones dando sus primeros pasos
+                profesionales en desarrollo frontend.
+              </p>
             </div>
 
-            <div class="hero-image" aria-hidden="false">
-                <div class="profile-image-container" role="img" aria-label="Foto de perfil de Anibal Ubieda">
-                    <img src="images/tu-foto-de-perfil.jpg" alt="Anibal Ubieda - Desarrollador Full Stack" class="profile-image" loading="lazy">
-                </div>
+            <div class="info-card">
+              <h3>Qué puedo aportar</h3>
+              <p>
+                Me entusiasma traducir interfaces en experiencias claras y
+                accesibles. Traigo disciplina de ingeniería y muchas ganas de
+                seguir aprendiendo en equipo.
+              </p>
+              <ul class="info-list" role="list">
+                <li>
+                  Base sólida en HTML, CSS, JavaScript y patrones modernos de
+                  UI.
+                </li>
+                <li>
+                  Experiencia resolviendo problemas reales desde
+                  telecomunicaciones.
+                </li>
+                <li>
+                  Actitud curiosa, comunicación clara y compromiso con la mejora
+                  continua.
+                </li>
+              </ul>
             </div>
-        </section>
+          </aside>
 
-        <!-- PROJECTOS -->
-        <section id="projects" class="projects-section anchor-offset" tabindex="-1" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Featured projects</h2>
+          <div class="hero-content">
+            <p class="eyebrow">
+              Ingeniero en Telecomunicaciones · Aprendiz de Frontend
+            </p>
+            <h2 id="about-heading">Hola, soy Anibal Ubieda</h2>
 
-            <div class="projects-grid">
-                <article class="project-card" aria-labelledby="p1-title">
-                    <h3 id="p1-title">Proyecto N°1: E-commerce Moderno</h3>
-                    <p>Plataforma de venta en línea construida con React y Next.js. Enfocada en velocidad, accesibilidad y UX.</p>
-                    <div class="tags">
-                        <span>#React</span>
-                        <span>#NextJS</span>
-                        <span>#CSSGrid</span>
-                    </div>
-                    <div class="button-cards">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Ver Demo →</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Repository →</a>
-                    </div>
-                </article>
-
-                <article class="project-card" aria-labelledby="p2-title">
-                    <h3 id="p2-title">Proyecto N°2: Dashboard Interactivo</h3>
-                    <p>Visualización de datos avanzada usando D3.js y animaciones GSAP para transiciones suaves.</p>
-                    <div class="tags">
-                        <span>#VueJS</span>
-                        <span>#D3JS</span>
-                        <span>#GSAP</span>
-                    </div>
-                    <div class="button-cards">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Ver Demo →</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Repository →</a>
-                    </div>
-                </article>
-
-                <article class="project-card" aria-labelledby="p3-title">
-                    <h3 id="p3-title">Proyecto N°3: API REST Segura</h3>
-                    <p>API REST con Node.js y Express, autenticación JWT y buenas prácticas de seguridad y tests.</p>
-                    <div class="tags">
-                        <span>#NodeJS</span>
-                        <span>#Express</span>
-                        <span>#MongoDB</span>
-                        <span>#JWT</span>
-                    </div>
-                    <div class="button-cards">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Ver Demo →</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="view-link">Repository →</a>
-                    </div>
-                </article>
+            <div class="hero-intro">
+              <p class="tagline">
+                Descubrí en el frontend una forma de unir mi formación técnica
+                con mi gusto por las interfaces. Estoy construyendo proyectos
+                reales mientras busco mi primera oportunidad como desarrollador
+                junior.
+              </p>
+              <p class="about-description">
+                Actualmente perfecciono mis habilidades con React y buenas
+                prácticas de accesibilidad. Me gusta trabajar con diseños
+                limpios, documentar lo que aprendo y compartirlo con la
+                comunidad.
+              </p>
             </div>
-        </section>
 
-        <!-- HABILIDADES -->
-        <section id="skills" class="skills-section anchor-offset" tabindex="-1" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">My Technological Stack</h2>
-            <ul class="skills-list" aria-hidden="false">
-                <li>HTML5 Semántic</li>
-                <li>CSS3 (Flexbox & Grid)</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React / Vue</li>
-                <li>Node.js & Express</li>
-                <li>MongoDB & MySQL</li>
-                <li>Git & GitHub</li>
-                <li>Performance & SEO</li>
-                <li>Responsive Design</li>
-                <li>REST APIs</li>
+            <div class="hero-actions">
+              <a href="#projects" class="neu-button">Ver proyectos</a>
+              <a href="#contact" class="ghost-button">Hablemos</a>
+            </div>
+
+            <ul class="hero-highlights" role="list">
+              <li>
+                <span class="metric">1 año</span>
+                <span class="label">aprendiendo y practicando frontend</span>
+              </li>
+              <li>
+                <span class="metric">3 proyectos</span>
+                <span class="label">con enfoque en usabilidad y datos</span>
+              </li>
+              <li>
+                <span class="metric">+5 años</span>
+                <span class="label">de base en ingeniería y telecom</span>
+              </li>
             </ul>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- CONTACTO -->
-        <section id="contact" class="contact-section anchor-offset" tabindex="-1" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Let's talk about your project</h2>
+      <section
+        id="experience"
+        class="experience-section anchor-offset"
+        tabindex="-1"
+        aria-labelledby="experience-heading"
+      >
+        <h2 id="experience-heading">Experiencia destacada</h2>
+        <div class="timeline" role="list">
+          <article class="timeline-item" role="listitem">
+            <p class="timeline-period">
+              2024 — Actualidad · Proyectos personales
+            </p>
+            <h3>Desarrollador Frontend Junior</h3>
+            <p>
+              Diseño y construyo interfaces web responsive como parte de mi
+              transición profesional desde telecomunicaciones hacia el
+              desarrollo.
+            </p>
+            <ul class="timeline-highlights" role="list">
+              <li>
+                Maqueté y desplegué aplicaciones con React, Vite y Tailwind para
+                practicar componentes reutilizables.
+              </li>
+              <li>
+                Iteré sobre feedback de usuarios reales para mejorar tiempos de
+                carga y claridad de formularios.
+              </li>
+              <li>
+                Documenté aprendizajes en GitHub y blog personal para reforzar
+                buenas prácticas.
+              </li>
+            </ul>
+          </article>
 
-            <div class="contact-content">
-                    <ul class="example-2">
-                    <li class="icon-content">
-                        <a
-                        href="https://linkedin.com/in/anibal-ubieda"
-                        aria-label="LinkedIn"
-                        data-social="linkedin"
-                        >
-                        <div class="filled"></div>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-linkedin"
-                            viewBox="0 0 16 16"
-                            xml:space="preserve"
-                        >
-                            <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                            fill="currentColor"
-                            ></path>
-                        </svg>
-                        </a>
-                        <div class="tooltip">LinkedIn</div>
-                    </li>
-                    <li class="icon-content">
-                        <a href="https://github.com/Sacr3int3x" aria-label="GitHub" data-social="github">
-                        <div class="filled"></div>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-github"
-                            viewBox="0 0 16 16"
-                            xml:space="preserve"
-                        >
-                            <path
-                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                            fill="currentColor"
-                            ></path>
-                        </svg>
-                        </a>
-                        <div class="tooltip">GitHub</div>
-                    </li>
-                    <li class="icon-content">
-                        <a
-                        href="https://www.instagram.com/aaubieda/"
-                        aria-label="Instagram"
-                        data-social="instagram"
-                        >
-                        <div class="filled"></div>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-instagram"
-                            viewBox="0 0 16 16"
-                            xml:space="preserve"
-                        >
-                            <path
-                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-                            fill="currentColor"
-                            ></path>
-                        </svg>
-                        </a>
-                        <div class="tooltip">Instagram</div>
-                    </li>
-                    
-                    </ul>
-                    
+          <article class="timeline-item" role="listitem">
+            <p class="timeline-period">
+              2021 — 2022 · Empresa de telecomunicaciones
+            </p>
+            <h3>Especialista y gerente de operaciones</h3>
+            <p>
+              Dirigí equipos multidisciplinarios enfocados en sostener la
+              operación de radiobases en energía, telecom y climatización.
+            </p>
+            <ul class="timeline-highlights" role="list">
+              <li>
+                Gestioné KPIs de respuesta, disponibilidad y mantenimiento
+                preventivo para más de 120 sitios.
+              </li>
+              <li>
+                Coordiné técnicos de campo, soporte NOC y proveedores externos
+                bajo un mismo tablero operativo.
+              </li>
+              <li>
+                Automaticé reportes administrativos con Python para presentar
+                resultados semanales a la dirección.
+              </li>
+            </ul>
+          </article>
 
-                <div class="contact-cta">
-                    <p>Do you have a project in mind? Let's talk!</p>
-                    <a href="mailto:aubiedag@gmail.com" class="neu-button">Send email</a>
-                </div>
+          <article class="timeline-item" role="listitem">
+            <p class="timeline-period">
+              2017 — 2025 · Universidad Central de Venezuela
+            </p>
+            <h3>Ingeniero Electricista mención Telecomunicaciones</h3>
+            <p>
+              Egresé de la Universidad Central de Venezuela, la universidad más
+              reconocida nacionalmente, combinando la carrera con roles de
+              docencia y mentoría.
+            </p>
+            <ul class="timeline-highlights" role="list">
+              <li>
+                Profesor del Programa Samuel Robinson y preparador de Geometría
+                Descriptiva en la Facultad de Ingeniería.
+              </li>
+              <li>
+                Participé en proyectos de laboratorio sobre comunicaciones
+                digitales y energía aplicada.
+              </li>
+              <li>
+                Inicié mis primeros scripts en Python y MATLAB para análisis de
+                datos técnicos.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="projects-section anchor-offset"
+        tabindex="-1"
+        aria-labelledby="projects-heading"
+      >
+        <h2 id="projects-heading">Proyectos destacados</h2>
+
+        <div class="projects-grid">
+          <article class="project-card" aria-labelledby="p1-title">
+            <header class="project-header">
+              <p class="project-kind">Marketplace de trueques</p>
+              <h3 id="p1-title">PeloAPPelo</h3>
+            </header>
+            <p>
+              App web para intercambiar objetos entre personas, inspirada en un
+              mercado de trueques. Construí el flujo de publicaciones, búsquedas
+              y chat simulado.
+            </p>
+            <ul class="project-meta" role="list">
+              <li><span class="meta-label">Rol:</span> Frontend developer</li>
+              <li>
+                <span class="meta-label">Stack:</span> React, Vite, TailwindCSS,
+                Firebase Auth
+              </li>
+              <li>
+                <span class="meta-label">Aprendizaje:</span> Manejo de estados
+                derivados y patrones de búsqueda con filtros.
+              </li>
+            </ul>
+            <div class="button-cards">
+              <a
+                href="https://github.com/Sacr3int3x/peloappelo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-link"
+                >Ver repositorio →</a
+              >
+              <a
+                href="mailto:aubiedag@gmail.com?subject=Quiero%20ver%20PeloAPPelo"
+                class="view-link"
+                >Solicitar demo →</a
+              >
             </div>
-        </section>
+          </article>
+
+          <article class="project-card" aria-labelledby="p2-title">
+            <header class="project-header">
+              <p class="project-kind">Automatización con Python</p>
+              <h3 id="p2-title">Automatizador administratis</h3>
+            </header>
+            <p>
+              Script que genera informes administrativos de infomes de
+              manteniminetos a partir de los datos obtenidos en el campo de una
+              empresa de telecomunicaciones. Eliminó tareas repetitivas, puestos
+              de trabajos inncesarios, unificó métricas clave y redujo costos.
+            </p>
+            <ul class="project-meta" role="list">
+              <li>
+                <span class="meta-label">Rol:</span> Automatización de procesos
+              </li>
+              <li>
+                <span class="meta-label">Stack:</span> Python, Pandas, Jinja2,
+                PDFKit
+              </li>
+              <li>
+                <span class="meta-label">Resultado:</span> Redujo en 70% el
+                tiempo de preparación de reportes semanales.
+              </li>
+            </ul>
+            <div class="button-cards">
+              <a
+                href="https://github.com/Sacr3int3x/automatizacion-Python"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-link"
+                >Ver scripts →</a
+              >
+              <a
+                href="mailto:aubiedag@gmail.com?subject=TeleReport%20Automator"
+                class="view-link"
+                >Solicitar resumen técnico →</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="p3-title">
+            <header class="project-header">
+              <p class="project-kind">Portfolio personal</p>
+              <h3 id="p3-title">Curriculón Web</h3>
+            </header>
+            <p>
+              El sitio que estás navegando: un proyecto para contar mi historia,
+              practicar diseño responsive y documentar mis avances como
+              desarrollador junior.
+            </p>
+            <ul class="project-meta" role="list">
+              <li>
+                <span class="meta-label">Rol:</span> Diseñador y desarrollador
+                frontend
+              </li>
+              <li>
+                <span class="meta-label">Stack:</span> HTML semántico, CSS
+                moderno, JavaScript vanilla
+              </li>
+              <li>
+                <span class="meta-label">Aprendizaje:</span> Copywriting,
+                accesibilidad y storytelling aplicado.
+              </li>
+            </ul>
+            <div class="button-cards">
+              <a
+                href="https://github.com/Sacr3int3x/Portfolio-projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view-link"
+                >Ver código →</a
+              >
+              <a href="#contact" class="view-link">Déjame feedback →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="skills-section anchor-offset"
+        tabindex="-1"
+        aria-labelledby="skills-heading"
+      >
+        <h2 id="skills-heading">Stack y herramientas</h2>
+        <div class="skills-groups">
+          <article class="skills-group">
+            <h3>Frontend en crecimiento</h3>
+            <ul role="list">
+              <li>HTML semántico · CSS moderno · Flexbox &amp; Grid</li>
+              <li>JavaScript ES6 · React · Hooks básicos</li>
+              <li>TailwindCSS · Storybook · Accesibilidad inicial</li>
+            </ul>
+          </article>
+          <article class="skills-group">
+            <h3>Fundamentos técnicos</h3>
+            <ul role="list">
+              <li>Python para scripts y automatizaciones</li>
+              <li>Git · GitHub · Control de versiones colaborativo</li>
+              <li>Automatización de datos con Pandas y Jinja2</li>
+            </ul>
+          </article>
+          <article class="skills-group">
+            <h3>Herramientas &amp; flujo</h3>
+            <ul role="list">
+              <li>Figma · Notion · Linear para planificación</li>
+              <li>Vite · npm scripts · Deploy en Vercel</li>
+              <li>Stitch (Google) · Zapier para integraciones ligeras</li>
+              <li>Documentación lean y comunicación asíncrona</li>
+            </ul>
+          </article>
+          <article class="skills-group">
+            <h3>Contexto telecom</h3>
+            <ul role="list">
+              <li>Redes de telecomunicaciones · diagnóstico de campo</li>
+              <li>Procesamiento de datos técnicos para informes</li>
+              <li>Trabajo interdisciplinario con equipos operativos</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="contact-section anchor-offset"
+        tabindex="-1"
+        aria-labelledby="contact-heading"
+      >
+        <h2 id="contact-heading">Construyamos algo juntos</h2>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Conversemos</h3>
+            <p>
+              ¿Necesitas apoyo para prototipos, landing pages o automatizaciones
+              ligeras? Estoy listo para sumar como desarrollador frontend junior
+              y seguir aprendiendo.
+            </p>
+            <a
+              href="mailto:aubiedag@gmail.com?subject=Oportunidad%20Frontend%20Junior"
+              class="neu-button"
+              >Escríbeme</a
+            >
+          </article>
+          <article class="contact-card contact-details">
+            <h3>Contacto directo</h3>
+            <ul class="contact-list" role="list">
+              <li>
+                <span>Email:</span>
+                <a href="mailto:aubiedag@gmail.com">aubiedag@gmail.com</a>
+              </li>
+              <li>
+                <span>LinkedIn:</span>
+                <a
+                  href="https://linkedin.com/in/anibal-ubieda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/anibal-ubieda</a
+                >
+              </li>
+              <li>
+                <span>GitHub:</span>
+                <a
+                  href="https://github.com/Sacr3int3x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/Sacr3int3x</a
+                >
+              </li>
+              <li><span>Ubicación:</span> Caracas, Venezuela (GMT-4)</li>
+            </ul>
+            <ul class="social-links" role="list">
+              <li>
+                <a
+                  href="https://linkedin.com/in/anibal-ubieda"
+                  aria-label="LinkedIn"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Sacr3int3x" aria-label="GitHub"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/aaubieda/"
+                  aria-label="Instagram"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
-        <p>&copy; <time datetime="2025">2025</time> Anibal Ubieda.</p>
+      <p>
+        &copy; <time datetime="2025">2025</time> Anibal Ubieda. Construido con
+        pasión y café.
+      </p>
     </footer>
 
-
-
-
-
-
-
-
     <script>
-        // Header translucent on scroll (defer-like behaviour sin bloquear render)
-        (function () {
-            const header = document.querySelector('.site-header');
-            let lastKnownScroll = 0;
-            let ticking = false;
+      (function () {
+        const header = document.querySelector(".site-header");
+        let lastKnownScroll = 0;
+        let ticking = false;
 
-            function onScroll() {
-                lastKnownScroll = window.scrollY || window.pageYOffset;
-                if (!ticking) {
-                    window.requestAnimationFrame(function () {
-                        if (lastKnownScroll > 10) header.classList.add('scrolled');
-                        else header.classList.remove('scrolled');
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
+        // Scroll header effect
+        function onScroll() {
+          lastKnownScroll = window.scrollY || window.pageYOffset;
+          if (!ticking) {
+            window.requestAnimationFrame(function () {
+              if (lastKnownScroll > 10) header.classList.add("scrolled");
+              else header.classList.remove("scrolled");
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        // Skip link mejorado
+        const skip = document.querySelector(".skip-link");
+        if (skip) {
+          skip.addEventListener("click", function (e) {
+            e.preventDefault();
+            const main = document.getElementById("main-content");
+            if (main) {
+              main.focus();
+              main.scrollIntoView({ behavior: 'smooth' });
             }
+          });
+        }
 
-            window.addEventListener('scroll', onScroll, { passive: true });
+        // Intersection Observer para animaciones al scroll
+        const observerOptions = {
+          threshold: 0.15,
+          rootMargin: '0px 0px -80px 0px'
+        };
 
-            // Ensure skip link focuses main for keyboard users
-            const skip = document.querySelector('.skip-link');
-            if (skip) {
-                skip.addEventListener('click', function () {
-                    const main = document.getElementById('main-content');
-                    if (main) main.focus();
-                });
+        const fadeObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
             }
-        })();
+          });
+        }, observerOptions);
+
+        // Observar secciones para fade-in
+        document.querySelectorAll('section:not(.hero-section)').forEach(section => {
+          section.style.opacity = '0';
+          section.style.transform = 'translateY(30px)';
+          section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+          fadeObserver.observe(section);
+        });
+
+        // Efecto parallax ligero en hero
+        const heroSection = document.querySelector('.hero-section');
+        const heroContent = document.querySelector('.hero-content');
+        if (heroSection && window.innerWidth > 768) {
+          window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            if (scrolled < window.innerHeight) {
+              if (heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.15}px)`;
+                heroContent.style.opacity = `${1 - scrolled / 600}`;
+              }
+            }
+          }, { passive: true });
+        }
+
+        // Smooth scroll para navegación interna
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || !href) return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              const headerOffset = 100;
+              const elementPosition = target.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Efecto ripple en botones
+        document.querySelectorAll('.neu-button, .ghost-button').forEach(button => {
+          button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple-effect');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+          });
+        });
+
+        // Observar project cards para animación escalonada
+        const projectCards = document.querySelectorAll('.project-card');
+        if (projectCards.length > 0) {
+          projectCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+          });
+
+          const projectObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+              }
+            });
+          }, { threshold: 0.1 });
+
+          projectCards.forEach(card => projectObserver.observe(card));
+        }
+
+        // Lazy loading de imágenes
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.src; // Trigger loading
+                imageObserver.unobserve(img);
+              }
+            });
+          });
+          
+          images.forEach(img => imageObserver.observe(img));
+        }
+
+        // Añadir clase para indicar que JS está activo
+        document.documentElement.classList.add('js-enabled');
+
+        console.log('🚀 Portfolio cargado con éxito');
+      })();
     </script>
-</body>
+  </body>
 </html>
